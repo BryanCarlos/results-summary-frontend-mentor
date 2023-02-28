@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+/* Colors variables */
+
+/* Primary */
+
+--lightRed: hsl(0, 100%, 67%); /* Reaction */
+--orangeyYellow: hsl(39, 100%, 56%); /* Memory */
+--greenTeal: hsl(166, 100%, 37%); /* Verbal */
+--cobaltBlue: hsl(234, 85%, 45%); /* Visual */
+
+/* Gradients */ 
+
+/* Result Container backgroud */
+--lightSlateBlueBG: hsl(252, 100%, 67%); 
+--lightRoyalBlueBG: hsl(241, 81%, 54%);
+
+/* Result number circle */
+--violetBlueCircle: hsla(256, 72%, 46%, 1);
+--persianBlueCircle: hsla(241, 72%, 46%, 0);
+
+/* Neutral */ 
+
+--white: hsl(0, 0%, 100%);
+--paleBlue: hsl(221, 100%, 96%);
+--lightLavender: hsl(241, 100%, 89%);
+--darkGrayBlue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk';
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    flex: 1 0 600px;
+}
+
+.container {
+    display: flex;
+    height: 480px;
+    width: 680px;
+}
+
+.resultContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    border-radius: 30px;
+    padding: 40px 10px;
+}
+
+.summaryContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.headingResult {
+    font-size: 20px;
+    color: var(--lightLavender);
+    font-weight: 500;
+}
+
+.resultValue {
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 55px;
+    color: var(--white);
+    font-weight: 800;
+}
+
+.resultValue p {
+    color: var(--lightLavender);
+    font-weight: 500;
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--white);
+}
+
+.paragraph {
+    margin: 20px 40px;
+    font-weight: 500;
+    color: var(--lightLavender);
+}
+
+.summaryContainer {
+    padding: 40px;
+}
+
+.headingSummary {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.summaryValue {
+    display: grid;
+    grid-template-areas: 
+    "reaction reactionValue"
+    "memory memoryValue"
+    "verbal verbalValue"
+    "visual visualValue";
+    row-gap: 50px;
+    margin: 40px 0px;
+    align-items: center;
+}
+
+.reaction {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--lightRed);
+}
+
+.memory {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--orangeyYellow);
+}
+.verbal {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--greenTeal);
+}
+.visual {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    color: var(--cobaltBlue);
+}
+
+.resultNumber {
+    font-weight: 700;
+}
+
+.totalNumber {
+    color: hsla(0, 5%, 22%, 0.548);
+}
+
+.continue {
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    background-color: var(--darkGrayBlue);
+    color: var(--white);
+    border: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.continue:hover {
+    background-image: linear-gradient(to top, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 470px) {
+    .principal {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 370px;
+    }
+
+    .resultContainer {
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+
+    .resultValue {
+        height: 100%;
+        width: 93px;
+    }
+}
